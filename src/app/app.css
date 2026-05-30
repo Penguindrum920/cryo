@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+  font-family: "Orbitron", system-ui, sans-serif;
+  background: #0b0f14;
+}
+
+button {
+  font: inherit;
+}
+
+.cryo-hero-bg {
+  background: #0b0f14;
+}
+
+.cryo-second-panel,
+.cryo-second-word,
+.cryo-second-copy {
+  opacity: 0;
+}
+
+.cryo-second-panel {
+  transform: translate3d(0, 48px, 0);
+}
+
+.cryo-frost {
+  background-image: radial-gradient(
+      circle at 50% 20%,
+      rgba(245, 247, 255, 0.08),
+      transparent 22rem
+    ),
+    linear-gradient(rgba(245, 247, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 247, 255, 0.06) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    44px 44px,
+    44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+.liquid-canvas-overlay {
+  mix-blend-mode: screen;
+}
+
+.reviews-typing-cursor {
+  animation: reviews-cursor-blink 0.78s steps(1, end) infinite;
+}
+
+@keyframes reviews-cursor-blink {
+  0%,
+  48% {
+    opacity: 1;
+  }
+
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
