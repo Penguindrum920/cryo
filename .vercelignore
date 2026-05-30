@@ -1,0 +1,14 @@
+.git
+.next
+node_modules
+out
+build
+
+# source/design assets are kept in GitHub, runtime assets live under public/
+Assets
+
+# local verification artifacts
+.chrome*
+.codex-screens
+*.log
+tsconfig.tsbuildinfo
